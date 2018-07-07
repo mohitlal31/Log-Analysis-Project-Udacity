@@ -1,0 +1,30 @@
+What are the most popular three articles of all time?
+╒══════════════════════════════════╤═════════╕
+│ Article                          │  Views  │
+╞══════════════════════════════════╪═════════╡
+│ Candidate is jerk, alleges rival │ 338647  │
+├──────────────────────────────────┼─────────┤
+│ Bears love berries, alleges bear │ 253801  │
+├──────────────────────────────────┼─────────┤
+│ Bad things gone, say good people │ 170098  │
+╘══════════════════════════════════╧═════════╛
+
+Who are the most popular article authors of all time?
+╒════════════════════════╤═════════╕
+│ Author                 │  Views  │
+╞════════════════════════╪═════════╡
+│ Ursula La Multa        │ 2030376 │
+├────────────────────────┼─────────┤
+│ Rudolf von Treppenwitz │ 1693828 │
+├────────────────────────┼─────────┤
+│ Anonymous Contributor  │ 680392  │
+├────────────────────────┼─────────┤
+│ Markoff Chaney         │ 338228  │
+╘════════════════════════╧═════════╛
+
+On which days did more than 1% of requests lead to errors?
+╒════════════╤════════════╕
+│ Date       │  Error(%)  │
+╞════════════╪════════════╡
+│ 2016-07-17 │    2.26    │
+╘════════════╧════════════╛
