@@ -3,7 +3,7 @@
 A simple reporting tool to present important details about a newspaper website
  
 The project uses python code to read the postgreSQL databases 
-and presents answers to 3 important questions about the data.
+and presents answers to 3 important questions about the news data.
 
 ### Required Libraries, Softwares and Dependencies
 
