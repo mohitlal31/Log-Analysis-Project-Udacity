@@ -27,12 +27,6 @@ Running this command will connect to your installed database server and execute 
 creating tables and populating them with data. 
 
 #### 4. Create Views
-To build the reporting tool, you'll need to load the site's data into your local database.
-To load the data, cd into the vagrant directory and use the command `psql -d news -f newsdata.sql`.
-
-Running this command will connect to your installed database server and execute the SQL commands in the downloaded file, 
-creating tables and populating them with data. 
-
 Before running the python program, you need to create the pre-requisite postgreSQL database views which are used by the python code.
 From the vagrant directory in your virtual box, run the following postgreSQL queries from the command line in the same order 
 
