@@ -44,7 +44,6 @@ From the vagrant directory in your virtual box, run the following postgreSQL que
 
 Download the project zip file to you computer and unzip the file. Or clone this repository.
 Place the project file inside the vagrant directory in your system alongside the newsdata.sql file.
-if you haven't installed virtual box and vagrant, please refer to the udacity course for more details.
 
 Navigate to the vagrant directory in your virtual box and type in the following command:
 
