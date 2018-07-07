@@ -34,7 +34,7 @@ From the vagrant directory in your virtual box, run the following postgreSQL que
 
 `create view top_articles as select articles.author, articles.title, top_paths.num from articles, top_paths where top_paths.path like '%' || articles.slug || '%';`
 
-`create view top_authors as select top_articles.author, sum(top_articles.num) as num_views from authors, top_articles group by top_articles.author order by num_views desc;`
+`create view top_authors as select top_articles.author, sum(top_articles.num) as num_views from top_articles group by top_articles.author order by num_views desc;`
 
 `create view failed_views as select time::timestamp::date, count(*) as num from log where status != '200 OK' group by time::timestamp::date order by time::timestamp::date;`
 

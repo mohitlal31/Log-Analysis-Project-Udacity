@@ -9,7 +9,10 @@ DBNAME = "news"
 def getMostPopularArticles(numArticles):
     """returns a list of articles from the database
        with the most number of views"""
-    db = psycopg2.connect(database=DBNAME)
+    try:
+        db = psycopg2.connect(database=DBNAME)
+    except psycopg2.Error as e:
+        print("connection to the database failed with error " + str(e))
     c = db.cursor()
     c.execute("""select articles.title, top_paths.num
               from articles, top_paths
@@ -22,7 +25,10 @@ def getMostPopularArticles(numArticles):
 def getMostPopularAuthors():
     """returns a list of authors from the database
        with the most number of article views"""
-    db = psycopg2.connect(database=DBNAME)
+    try:
+        db = psycopg2.connect(database=DBNAME)
+    except psycopg2.Error as e:
+        print("connection to the database failed with error " + str(e))
     c = db.cursor()
     c.execute("""select authors.name, top_authors.num_views
               from top_authors, authors
