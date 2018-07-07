@@ -25,8 +25,8 @@ def getMostPopularAuthors():
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
     c.execute("""select authors.name, top_authors.num_views
-            from top_authors, authors
-            where top_authors.author = authors .id;""")
+              from top_authors, authors
+              where top_authors.author = authors .id;""")
     rows = c.fetchall()
     db.close()
     return rows
@@ -38,11 +38,11 @@ def getErrorRatesForArticleRequests():
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
     c.execute("""select total_views.time::timestamp::date,
-            failed_views.num * 100 / total_views.num::float as errors
-            from failed_views, total_views
-            where failed_views.time::timestamp::date =
-                  total_views.time::timestamp::date
-            and failed_views.num * 100 / total_views.num::float > 1;""")
+              failed_views.num * 100 / total_views.num::float as errors
+              from failed_views, total_views
+              where failed_views.time::timestamp::date =
+                    total_views.time::timestamp::date
+              and failed_views.num * 100 / total_views.num::float > 1;""")
     rows = c.fetchall()
     db.close()
     return rows
