@@ -24,9 +24,13 @@ From the vagrant directory in your virtual box, run
 Then run the following postgreSQL queries from the command line in the same order 
 
 `create view top_paths as select path, count(*) as num from log where log.status = '200 OK' group by path order by num desc;`
+
 `create view top_articles as select articles.author, articles.title, top_paths.num from articles, top_paths where top_paths.path like '%' || articles.slug || '%';`
+
 `create view top_authors as select top_articles.author, sum(top_articles.num) as num_views from authors, top_articles group by top_articles.author order by num_views desc;`
+
 `create view failed_views as select time::timestamp::date, count(*) as num from log where status != '200 OK' group by time::timestamp::date order by time::timestamp::date;`
+
 `create view total_views as select time::timestamp::date, count(*) as num from log group by time::timestamp::date order by time::timestamp::date;`
 
 ### How To Run Project
